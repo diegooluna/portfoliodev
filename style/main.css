@@ -11,6 +11,19 @@
 body{
     /* background-color: #FAF1E2;   */
     background-image: radial-gradient(circle, #FFFFFF,#FAF1E2 );
+} 
+a{
+    text-decoration: none;
+    color: #FF7A40;
+}
+a:hover{
+    text-decoration: underline;
+    color: #545456;
+    background-color: #FF7A40;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 1s;
+    font-size: 1.5em;
 }
 .header {
     position: sticky;
@@ -27,7 +40,6 @@ body{
     grid-template-rows: 1fr;
     padding: 1rem;
     font-size: 18px;
-    text-decoration: underline;
     grid-template-areas:
     "DiegoLuna Currentwork Location Nav";
 }
@@ -182,4 +194,28 @@ li:nth-child(6){
 }
 li:nth-child(7){
     transition-delay: 1.7s;
+}
+.skillssection{
+    display: inline;
+}
+.skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+}
+.skillimg{
+    width: 4%;
+    filter: saturate(15%);
+}
+.skillimg:hover{
+    filter: saturate(100%);
+    transform: scale(1.6) translateY(-50px);
+    transition: 300ms;
+}
+/* adjacent sibling combinator o algo asi */
+.skillimg:hover + .skillimg {
+    transform: scale(1.2) translateY(-15px); 
 }
