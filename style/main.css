@@ -8,6 +8,7 @@
     font-family: "wudooregular";
     src: url(../fonts/WudooMono-Regular.ttf);
 }
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/mouse.css');
 body{
     /* background-color: #FAF1E2;   */
     background-image: radial-gradient(circle, #FFFFFF,#FAF1E2 );
@@ -148,13 +149,24 @@ h2:hover span{
     0 0 20px #ffffff
     0 0 40px #ffffff; 
 }
-
 .welcome{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+.iconmouse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+    top: 50%;
+    bottom: 50%;
+}
+/* .gg-mouse{
+} */
 .box{
     display: flex;
     overflow: hidden;
