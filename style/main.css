@@ -197,14 +197,17 @@ li:nth-child(7){
 }
 .skillssection{
     display: inline;
+    /* position: fixed; */
+    bottom: 0;
 }
+
 .skills{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 0.5rem;
+    gap: 1rem;    
 }
 .skillimg{
     width: 4%;
