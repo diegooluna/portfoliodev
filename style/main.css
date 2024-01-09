@@ -22,9 +22,9 @@ a:hover{
     color: #545456;
     background-color: #FF7A40;
     border-radius: 5px;
-    padding: 5px;
+    padding: 3px;
     transition: 1s;
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
 .header {
     position: sticky;
@@ -160,17 +160,12 @@ h2:hover span{
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: center;
     margin-top: 10px;
-    top: 50%;
-    bottom: 50%;
 }
-/* .gg-mouse{
-} */
 .box{
     display: flex;
-    overflow: hidden;
-    padding: 600px;
+    /* overflow: hidden; */
+    /* padding: 600px; */
 }
 
 .box li{
@@ -208,7 +203,7 @@ li:nth-child(7){
     transition-delay: 1.7s;
 }
 .skillssection{
-    display: inline;
+    display: inline-block;
     /* position: fixed; */
     bottom: 0;
 }
@@ -218,19 +213,26 @@ li:nth-child(7){
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
-    gap: 1rem;    
+    /* flex-wrap: nowrap; */
+    gap: 0.5rem;    
 }
+
 .skillimg{
-    width: 4%;
-    filter: saturate(15%);
+    width: 3%; 
+    filter: saturate(65%);
+    transition: transform 500ms;
 }
 .skillimg:hover{
     filter: saturate(100%);
     transform: scale(1.6) translateY(-50px);
     transition: 500ms;
+    gap: 8px;
 }
 /* adjacent sibling combinator o algo asi */
 .skillimg:hover + .skillimg {
     transform: scale(1.2) translateY(-15px); 
+}
+.skillimg:has(+ .skillimg:hover){
+    transform: scale(1.2) translateY(-15px); 
+
 }
