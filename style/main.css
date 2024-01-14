@@ -4,14 +4,17 @@
     box-sizing: border-box;
     
 }
+html{
+    scroll-behavior: smooth;
+}
 @font-face {
     font-family: "wudooregular";
     src: url(../fonts/WudooMono-Regular.ttf);
 }
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/mouse.css');
 body{
-    /* background-color: #FAF1E2;   */
-    background-image: radial-gradient(circle, #FFFFFF,#FAF1E2 );
+    background-color: #fcf6eb;   
+    /* background-image: radial-gradient(circle, #FFFFFF,#FAF1E2 ); */
 } 
 a{
     text-decoration: none;
@@ -76,7 +79,7 @@ a:hover{
     grid-template-rows: repeat(3,1fr);
     grid-template-areas:
     "rol rol rol . . ."
-    "img img img . . ."
+    "img img img img img img"
     "arrow text . name name name";
     align-content: start;
 }
@@ -84,10 +87,14 @@ a:hover{
     grid-area: rol;
     font-size: 8rem;
     text-align:start;
-    letter-spacing: 0.5rem;
+    letter-spacing: 1rem;
 }
 .profileimg{
     grid-area: img;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
 }
 .arrow{
     grid-area: arrow;
@@ -117,11 +124,20 @@ a:hover{
     grid-area: name;
     font-size: 8rem;
     text-align: end;
-    letter-spacing: 0.5rem;
+    letter-spacing: 1rem;
 }
+ 
 .code1{
     width: 65vh;
+    
 }
+
+
+.profileimg:hover{
+    transition: 1s;
+}
+
+
 h2 span{
     transition: .5s linear;
 }
@@ -136,18 +152,17 @@ h2:hover span{
     text-shadow: 0 0 10px #ffffff
     0 0 20px #ffffff
     0 0 40px #ffffff;
+    padding: 1em;
+    transition: 500ms;
 }
-.description:hover{
-    transform: rotateZ(10deg);
-    animation: three 2s infinite;
-    animation-direction: alternate;
-    transition: 1s linear;
-} 
+
 .description:hover span{
     color: #FF7A40;
     text-shadow: 0 0 10px #ffffff
     0 0 20px #ffffff
     0 0 40px #ffffff; 
+    padding: 1em;
+    transition: 500ms;
 }
 .welcome{
     display: flex;
@@ -236,3 +251,4 @@ li:nth-child(7){
     transform: scale(1.2) translateY(-15px); 
 
 }
+
