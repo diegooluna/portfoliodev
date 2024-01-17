@@ -83,6 +83,48 @@ a:hover{
     "arrow text . name name name";
     align-content: start;
 }
+.contactgrid{
+    font-family: "wudooregular";
+    color: #545456;
+    display: grid;
+    margin: 4rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    "img img img img img img"
+    "mail mail mail mail mail";
+    align-content: start;
+}
+.mail{
+    grid-area: mail;
+    font-size: 8rem;
+    text-align:start;
+    letter-spacing: 1rem;
+    
+}
+.mailgif{
+    grid-area: img;
+    width: 15vw;
+    filter: opacity(30%);
+    filter: saturate(110%);
+}
+h3 span{
+    transition: .5s linear;
+}
+h3:hover span:nth-child(1){
+    margin-right: 5px;
+}
+h3:hover span:nth-child(2){
+    margin-bottom: 30px;
+}
+h3:hover span{
+    color: #FF7A40;
+    text-shadow: 0 0 10px #ffffff
+    0 0 20px #ffffff
+    0 0 40px #ffffff;
+    padding: 1em;
+    transition: 500ms;
+}
 .title{
     grid-area: rol;
     font-size: 8rem;
@@ -177,6 +219,8 @@ h2:hover span{
     align-items: center;
     margin-top: 10px;
 }
+
+
 .box{
     display: flex;
     /* overflow: hidden; */
